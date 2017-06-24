@@ -1,0 +1,43 @@
+@mixin dark-overlay {
+    &:after {
+        content: "";
+        width: 50%;
+        height: auto;
+        position: absolute;
+        z-index: -1; // Take note of this negative z-index and compare to each article's positive z-index. This helps your content to show up over the overlay.
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+section.cover {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+    .container {
+        z-index: 3;
+    }
+    .background-container {
+        position: fixed;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        @include dark-overlay;
+        z-index: -2;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            min-width: 50%;
+            min-height: 50%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}

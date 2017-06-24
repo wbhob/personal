@@ -1,0 +1,336 @@
+.background-image-holder {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover !important;
+    background-position: 50% 50% !important;
+    z-index: 0;
+    transition: opacity .3s linear;
+    -webkit-transition: opacity .3s linear;
+    opacity: 0;
+    background: #252525;
+}
+
+.background-image-holder:not([class*='col-']) {
+    width: 100%;
+}
+
+.background-image-holder.background--bottom {
+    background-position: 50% 100% !important;
+}
+
+.background-image-holder.background--top {
+    background-position: 50% 0% !important;
+}
+
+.image--light .background-image-holder {
+    background: none;
+}
+
+.background-image-holder img {
+    display: none;
+}
+
+[data-overlay] {
+    position: relative;
+}
+
+[data-overlay]:before {
+    position: absolute;
+    content: '';
+    background: #252525;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+[data-overlay] *:not(.container):not(.background-image-holder) {
+    z-index: 2;
+}
+
+[data-overlay].image--light:before {
+    background: #fff;
+}
+
+[data-overlay].bg--primary:before {
+    background: #4a90e2;
+}
+
+[data-overlay="1"]:before {
+    opacity: 0.1;
+}
+
+[data-overlay="2"]:before {
+    opacity: 0.2;
+}
+
+[data-overlay="3"]:before {
+    opacity: 0.3;
+}
+
+[data-overlay="4"]:before {
+    opacity: 0.4;
+}
+
+[data-overlay="5"]:before {
+    opacity: 0.5;
+}
+
+[data-overlay="6"]:before {
+    opacity: 0.6;
+}
+
+[data-overlay="7"]:before {
+    opacity: 0.7;
+}
+
+[data-overlay="8"]:before {
+    opacity: 0.8;
+}
+
+[data-overlay="9"]:before {
+    opacity: 0.9;
+}
+
+[data-overlay="10"]:before {
+    opacity: 1;
+}
+
+[data-overlay="0"]:before {
+    opacity: 0;
+}
+
+[data-scrim-bottom] {
+    position: relative;
+}
+
+[data-scrim-bottom]:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 80%;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #252525 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, #252525));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #252525 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #252525 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #252525 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #252525 100%);
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+[data-scrim-bottom]:not(.image--light) h1,
+[data-scrim-bottom]:not(.image--light) h2,
+[data-scrim-bottom]:not(.image--light) h3,
+[data-scrim-bottom]:not(.image--light) h4,
+[data-scrim-bottom]:not(.image--light) h5,
+[data-scrim-bottom]:not(.image--light) h6 {
+    color: #a5a5a5;
+    color: #f1f1f1;
+}
+
+[data-scrim-bottom]:not(.image--light) p,
+[data-scrim-bottom]:not(.image--light) span,
+[data-scrim-bottom]:not(.image--light) ul {
+    color: #e6e6e6;
+}
+
+[data-scrim-bottom].image--light:before {
+    background: #fff;
+}
+
+[data-scrim-bottom="1"]:before {
+    opacity: 0.1;
+}
+
+[data-scrim-bottom="2"]:before {
+    opacity: 0.2;
+}
+
+[data-scrim-bottom="3"]:before {
+    opacity: 0.3;
+}
+
+[data-scrim-bottom="4"]:before {
+    opacity: 0.4;
+}
+
+[data-scrim-bottom="5"]:before {
+    opacity: 0.5;
+}
+
+[data-scrim-bottom="6"]:before {
+    opacity: 0.6;
+}
+
+[data-scrim-bottom="7"]:before {
+    opacity: 0.7;
+}
+
+[data-scrim-bottom="8"]:before {
+    opacity: 0.8;
+}
+
+[data-scrim-bottom="9"]:before {
+    opacity: 0.9;
+}
+
+[data-scrim-bottom="10"]:before {
+    opacity: 1;
+}
+
+[data-scrim-top] {
+    position: relative;
+}
+
+[data-scrim-top]:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 80%;
+    background: -moz-linear-gradient(bottom, #252525 0%, rgba(0, 0, 0, 0) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, left bottom, color-stop(0%, #252525), color-stop(100%, rgba(0, 0, 0, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(bottom, #252525 0%, rgba(0, 0, 0, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(bottom, #252525 0%, rgba(0, 0, 0, 0) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(bottom, #252525 0%, rgba(0, 0, 0, 0) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #252525 0%, rgba(0, 0, 0, 0) 100%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+[data-scrim-top]:not(.image--light) h1,
+[data-scrim-top]:not(.image--light) h2,
+[data-scrim-top]:not(.image--light) h3,
+[data-scrim-top]:not(.image--light) h4,
+[data-scrim-top]:not(.image--light) h5,
+[data-scrim-top]:not(.image--light) h6 {
+    color: #fff;
+}
+
+[data-scrim-top]:not(.image--light) p,
+[data-scrim-top]:not(.image--light) span,
+[data-scrim-top]:not(.image--light) ul {
+    color: #e6e6e6;
+}
+
+[data-scrim-top].image--light:before {
+    background: #fff;
+}
+
+[data-scrim-top="1"]:before {
+    opacity: 0.1;
+}
+
+[data-scrim-top="2"]:before {
+    opacity: 0.2;
+}
+
+[data-scrim-top="3"]:before {
+    opacity: 0.3;
+}
+
+[data-scrim-top="4"]:before {
+    opacity: 0.4;
+}
+
+[data-scrim-top="5"]:before {
+    opacity: 0.5;
+}
+
+[data-scrim-top="6"]:before {
+    opacity: 0.6;
+}
+
+[data-scrim-top="7"]:before {
+    opacity: 0.7;
+}
+
+[data-scrim-top="8"]:before {
+    opacity: 0.8;
+}
+
+[data-scrim-top="9"]:before {
+    opacity: 0.9;
+}
+
+[data-scrim-top="10"]:before {
+    opacity: 1;
+}
+
+.imagebg {
+    position: relative;
+}
+
+.imagebg .container {
+    z-index: 2;
+}
+
+.imagebg .container:not(.pos-absolute) {
+    position: relative;
+}
+
+.imagebg:not(.image--light) h1,
+.imagebg:not(.image--light) h2,
+.imagebg:not(.image--light) h3,
+.imagebg:not(.image--light) h4,
+.imagebg:not(.image--light) h5,
+.imagebg:not(.image--light) h6,
+.imagebg:not(.image--light) p,
+.imagebg:not(.image--light) ul,
+.imagebg:not(.image--light) blockquote {
+    color: #fff;
+}
+
+.imagebg:not(.image--light) .bg--white h1,
+.imagebg:not(.image--light) .bg--white h2,
+.imagebg:not(.image--light) .bg--white h3,
+.imagebg:not(.image--light) .bg--white h4,
+.imagebg:not(.image--light) .bg--white h5,
+.imagebg:not(.image--light) .bg--white h6 {
+    color: #252525;
+}
+
+.imagebg:not(.image--light) .bg--white p,
+.imagebg:not(.image--light) .bg--white ul {
+    color: #666666;
+}
+
+div[data-overlay] h1,
+div[data-overlay] h2,
+div[data-overlay] h3,
+div[data-overlay] h4,
+div[data-overlay] h5,
+div[data-overlay] h6 {
+    color: #fff;
+}
+
+div[data-overlay] p,
+div[data-overlay] ul {
+    color: #fff;
+}
+
+.parallax {
+    overflow: hidden;
+}
+
+.parallax .background-image-holder {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+}
