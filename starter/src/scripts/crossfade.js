@@ -4,7 +4,7 @@
     image = $('.cover .background-image-holder'),
     windowHeight = window.innerHeight / 2,
     isScroll = false,
-    currentScroll = windowHeight;
+    currentScroll = 0;
   console.log(currentScroll);
 
   var latestScroll = 0;

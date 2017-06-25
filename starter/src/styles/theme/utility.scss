@@ -22,7 +22,7 @@
         width: 20vw !important;
         margin-bottom: 2rem;
         border-radius: 50% !important;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(xs) {
             height: 50vw !important;
             width: 50vw !important;
         }
@@ -31,4 +31,8 @@
 
 .font-weight-light {
     font-weight: 300;
+}
+
+.resume-block {
+    margin-bottom: 30px;
 }
