@@ -1,11 +1,11 @@
 @import '../bootstrap/bootstrap.scss';
-.center {
-    margin-top: 20vh;
-    @include media-breakpoint-down(md) {
-        margin-top: 30vh;
-    }
-    @include media-breakpoint-down(xs) {
-        margin-top: 40vh;
+.cover.center {
+    position: relative;
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 

@@ -9,3 +9,6 @@ import '../styles/index.scss';
 import '../images/index';
 import 'jquery/dist/jquery';
 import './backgrounds';
+import './crossfade';
+import './parallax';
+import './scripts';
